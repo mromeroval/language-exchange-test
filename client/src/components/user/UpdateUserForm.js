@@ -140,8 +140,6 @@ const validate = values => {
                           <option />
                           <option value="Male">Male</option>
                           <option value="Female">Female</option>
-                          <option value="Undeclared">Undeclared</option>
-                          <option value="Other">Other</option>
                       </Field>
               </div>
   

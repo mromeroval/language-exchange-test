@@ -41,13 +41,14 @@ app.use( session({
 }));
  
 var cas = new CASAuthentication({
-    cas_url         : process.env.CAS_URL,
-    service_url     : process.env.CAS_SERVICE_URL,
+    cas_url         : "https://test/cas/",
+    service_url     : "http://localhost",
     cas_version     : '3.0',
+    cas_logout      : "https://test/cas/",
     renew           : true,
-    session_name    : process.env.CAS_SESSION_NAME,
+    session_name    : "cas_user",
     destroy_session : true,
-    is_dev_mode     : process.env.CAS_DEV_MODE,
+    is_dev_mode     : true,
     dev_mode_user   : process.env.CAS_DEV_MODE_USER
 });
 
@@ -79,7 +80,7 @@ app.get('/', function (req, res) {
 // This route will de-authenticate the client with the Express server and then 
 // redirect the client to the CAS logout page. 
 app.get( '/logout', function(req,res){
-  var cas_logout = process.env.CAS_LOGOUT;
+  var cas_logout = "http://localhost";
   // Destroy the entire session, and CAS session variables.
   req.session.destroy(function(err) {
     if (err) {
