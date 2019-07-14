@@ -134,7 +134,7 @@ class Chart extends Component {
 
         var allYears = [];
         usersRegistered.map(row=>{ allYears.push(row.x); return allYears})
-        const maxYear = Math.max(...allYears);
+        var maxYear = Math.max(...allYears);
         const minYear = Math.min(...allYears);
 
         // Data for sum of users by year

@@ -97,7 +97,6 @@ export function submitUserAvatar(image, id){
           .end((err, res) => {
               if(err){
                 dispatch({type:"SAVE_USER_AVATAR_REJECTED", payload:"There was a problem"});
-                console.log(err)
               }else{
                 dispatch({type:"SAVE_USER_AVATAR_FULFILLED", payload:file})
               }

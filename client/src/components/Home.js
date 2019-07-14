@@ -67,7 +67,6 @@ class Home extends Component{
                     <div className="card-body text-center">
                         <h3 className="mt-0">Welcome to TLE <span role="img" aria-label="chat">&nbsp;😀💬</span> </h3>
                         <p className="lead">This program helps a native speaker of one language to find a native <br/>speaker of another language to help each other in language learning.</p>
-                            <Link to={'/users/guide'}>This is how it works.</Link>
                         </div>
                     </div>
                 { home }

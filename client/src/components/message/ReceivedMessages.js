@@ -15,7 +15,6 @@ class ReceivedMessages extends Component{
 
         if (received_messages.length){
             messages = received_messages.map( message=>{
-                console.log(message)
 
               return (
                     <tr key={message.id} >
