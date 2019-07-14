@@ -49,7 +49,7 @@ var cas = new CASAuthentication({
     session_name    : "cas_user",
     destroy_session : true,
     is_dev_mode     : true,
-    dev_mode_user   : process.env.CAS_DEV_MODE_USER
+    dev_mode_user   : "admin"
 });
 
 //Morgan

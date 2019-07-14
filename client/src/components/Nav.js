@@ -108,9 +108,6 @@ class Nav extends React.Component {
                 <li className="nav-item">
                   <Link to={ '/users/profile' } className="nav-link">My Profile</Link>
                 </li>
-                <li className="nav-item">
-                  <Link to={ '/users/guide' } className="nav-link">Guide</Link>
-                </li>
 
               </ul>
               <ul className="navbar-nav">  

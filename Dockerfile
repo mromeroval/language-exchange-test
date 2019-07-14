@@ -9,6 +9,6 @@ RUN (cd client && npm install)
 COPY . .
 RUN (cd client && npm run-script build)
 
-EXPOSE 5002
+EXPOSE 5000
 
 CMD [ "npm", "start" ]

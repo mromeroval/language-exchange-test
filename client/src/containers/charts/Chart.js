@@ -84,10 +84,8 @@ class Chart extends Component {
 
         // Data for bar chart
         const barChartData = [];
-        var totalUsers = 0;
         var totalLanguages = this.props.reportState.totalUsersPerLanguages;
         totalLanguages.map(data=>{
-          totalUsers += data.total;
           barChartData.push({x:data.short_name,y:data.total, label:data.total.toString(),yOffset: -15});
           return barChartData;
         });
@@ -108,7 +106,7 @@ class Chart extends Component {
         })
 
         // Data for users registered per year
-        const usersRegistered = [];
+        var usersRegistered = [];
         d3.nest()
         .key(function(d){ return d.created_at.split("-")[0]; })
         .sortKeys(d3.ascending)
@@ -139,7 +137,7 @@ class Chart extends Component {
         const maxYear = Math.max(...allYears);
         const minYear = Math.min(...allYears);
 
-    // Data for sum of users by year
+        // Data for sum of users by year
 
         var usersRegisteredLegend = [
           {title: "New", color:"red"},
@@ -177,7 +175,7 @@ class Chart extends Component {
     {/* Bar chart */}
                 <div className="card mt-3 mb-3">
                   <div className="card-header">
-                    Total : {totalUsers} Records
+                    Total : {users.length} Records
                   </div>
                   <div className="card-body">
                   <div className="table-responsive">         
