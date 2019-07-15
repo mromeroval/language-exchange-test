@@ -4,7 +4,6 @@ import { connect } from "react-redux";
 import * as userActions from "../actions/userActions";
 import { withRouter, Redirect } from 'react-router-dom';
 import HomeSearch from '../components/home/HomeSearch';
-import {Link} from 'react-router-dom';
 import Img from 'react-image';
 import loading from '../assets/images/loading.gif';
 
