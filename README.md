@@ -17,5 +17,6 @@ In /client/package.json file configure API target :
   }`
 
 Restore database snapshot (from file)
+![language exchange db](https://aws-images-mauromero.s3-us-west-2.amazonaws.com/tle_db.png)
 
 In root run 'yarn start' to run the server and serve the built application
